@@ -1,0 +1,56 @@
+/* 导航栏图标 */
+.navbar-brand{
+	padding: 5px;
+}
+/*导航栏背景*/
+.navbar-default{
+	background: #238292;
+	border-color: #002060;
+}
+/*导航栏字体默认的字体颜色样式*/
+.navbar-default .navbar-nav>li>a{
+	color: white;
+}
+.navbar-default .navbar-nav>li>a:hover{
+	font-weight: bold;
+	color: red;
+}
+.navbar-default .navbar-nav>li>a:focus{
+	font-weight: bold;
+	color: red;
+}
+/*active的悬停，点击样式*/
+.navbar-default .navbar-nav > .active > a{
+	color: white;
+	background: #007AAE;
+}
+.navbar-default .navbar-nav > .active > a:hover{
+	color: red;
+	background: #60C5F1;
+}
+.navbar-default .navbar-nav > .active > a:focus{
+	background: #FBCFD0;
+	color: red;
+}
+/*导航栏下拉单元格的样式*/
+.navbar-default .navbar-nav>.open>a:hover {
+	color: #555;
+	background-color: #e7e7e7;
+}
+.navbar-default .navbar-nav>.open>a:focus{
+	background: #FBCFD0;
+	font-weight: bold;
+	color: red;
+}
+/*标题左侧图标*/
+.container span{
+	margin-right: 15px;
+}
+/* 底部样式 */
+.foot{
+	text-align: center;
+	background: #007aae;
+	color: white;
+	padding: 10px 0px;
+	margin-top: 80px;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <title>学生基本信息</title>
+
+        <!-- Bootstrap -->
+        <link href="bs/css/bootstrap.min.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/index-style.css" />
+
+        <!-- 引用ue中的文件 -->
+        <script src="ue/ueditor.config.js"></script>
+        <script src="ue/ueditor.all.min.js"></script>
+        <script src="bs/js/jquery.min.js"></script>
+        <script src="bs/js/bootstrap.min.js"></script>
+        <script>
+            var ue;
+            $().ready(function () {
+                ue = UE.getEditor("myeditor", {
+                    elementPathEnabled: false,
+                    maximumWords: 2000,
+                });
+            });
+        </script>
+        <script src="js/article.js"></script>
+    </head>
+
+    <body>
+        <!-- 导航栏 -->
+        <nav class="navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button
+                        type="button"
+                        class="navbar-toggle collapsed"
+                        data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"
+                        ><img src="images/logo.png" alt="" height="100%"
+                    /></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div
+                    class="collapse navbar-collapse"
+                    id="bs-example-navbar-collapse-1"
+                >
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#"
+                                >学院首页
+                                <span class="sr-only">(current)</span></a
+                            >
+                        </li>
+                        <li><a href="#">学院简介</a></li>
+                        <li class="dropdown">
+                            <a
+                                href="#"
+                                class="dropdown-toggle"
+                                data-toggle="dropdown"
+                                role="button"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                >二级学院 <span class="caret"></span
+                            ></a>
+                        </li>
+                        <li>
+                            <span id="classname"></span
+                            ><a href="index.html">学生基本信息</a>
+                        </li>
+                        <li class="active">
+                            <a href="article.html">博文系统</a>
+                        </li>
+                        <li><a href="blog.html">博文信息</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <!-- 主体内容 -->
+        <div class="container">
+            <h2 class="page-header">博文信息</h2>
+
+            <!-- 博文信息 -->
+            <form class="form-horizontal" role="form" action="#">
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label"
+                        >标题：</label
+                    >
+                    <div class="col-sm-10">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="firstname"
+                            placeholder="请输入标题"
+                        />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="coverimage" class="col-sm-2 control-label"
+                        >封面图像：</label
+                    >
+                    <div class="col-sm-10"></div>
+                </div>
+                <div class="form-group">
+                    <label for="firstname" class="col-sm-2 control-label"
+                        >博文类别：</label
+                    >
+                    <div class="col-sm-10">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="blog-category"
+                            list="class"
+                            placeholder="请选择博文类别"
+                        />
+                        <datalist id="class"></datalist>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="lastname" class="col-sm-2 control-label"
+                        >简介：</label
+                    >
+                    <div class="col-sm-10">
+                        <textarea
+                            rows="4"
+                            cols="50"
+                            autofocus
+                            class="form-control"
+                            placeholder="请输入博文简介"
+                            id="jj"
+                        ></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="coverimage" class="col-sm-2 control-label"
+                        >博文内容：</label
+                    >
+                    <div class="col-sm-10">
+                        <script id="myeditor" style="width: 100%;"></script>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button
+                            type="submit"
+                            class="btn btn-default"
+                            style="background-color: #007aae; color: #ffffff;"
+                            id="submitButton"
+                        >
+                            提交
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- 底部内容 -->
+        <div class="foot" style="background-color: grey;">
+            <p style="color: saddlebrown;">
+                作者：张龙生&nbsp;&nbsp;|&nbsp;&nbsp;班级：软件技术ZK1801<br />
+                邮箱：1460662245@qq.com<br />电话：XXXXXXXXXXXX
+            </p>
+        </div>
+    </body>
+</html>
